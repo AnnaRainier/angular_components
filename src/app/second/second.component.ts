@@ -6,12 +6,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./second.component.css']
 })
 export class SecondComponent {
-  @Input() src
-  @Output() onBtnClick = new EventEmitter<string>()
+  @Input() src1
+  @Output() onElemClick = new EventEmitter<string>()
 
-  onTitleClick(elem) {
+  onThisClick(elem) {
     //console.log(elem.src);
-    this.onBtnClick.emit(elem.src);
+    this.onElemClick.emit(elem.src);
     console.log(typeof(elem.src))
   }
 
